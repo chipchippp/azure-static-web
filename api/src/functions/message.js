@@ -6,8 +6,8 @@ app.http('message', {
     handler: async (request, context) => {
         context.log(`Http function processed request for url "${request.url}"`);
 
-        const name = request.query.get('name') || await request.text() || 'world';
+        const name = request.query.get('name') || await request.text() || 'T2210A';
 
-        return { body: `Hello, ${name}!` };
+        return { body: `Nguyễn Văn Lộc Lớp ${name}!` };
     }
 });
