@@ -6,14 +6,14 @@ app.http('message', {
     handler: async (request, context) => {
         context.log(`Http function processed request for url "${request.url}"`);
 
-        const name = request.query.get('name') || await request.text() || 'T2210A';
+        const name = request.query.get('name') || await request.text() || 'T2210A1';
 
         return { body: `Nguyễn Văn Lộc Lớp ${name}!` };
     }
 });
 
-app.exports = async function (context, req){
-    context.res.json({
-        text: "hello from the Api"
-    });
-};
+// app.exports = async function (context, req){
+//     context.res.json({
+//         text: "hello from the Api"
+//     });
+// };
