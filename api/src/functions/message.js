@@ -11,3 +11,9 @@ app.http('message', {
         return { body: `Nguyễn Văn Lộc Lớp ${name}!` };
     }
 });
+
+app.exports = async function (context, req){
+    context.res.json({
+        text: "hello from the Api"
+    });
+};
